@@ -48,8 +48,6 @@ masterplay.addEventListener('click',()=>{
         songbut[refindex].classList.add('fa-pause');
         audio.play();
     }
-
-
     else {
         gifoff();
         makeallplay();
@@ -119,6 +117,23 @@ nextbut.addEventListener('click',()=>{
     audio.src = listofsongs[newind].songpath;
     audio.play();
     refindex = newind;
+    document.getElementById('topofmaster').innerHTML = listofsongs[refindex].songname;
+    document.getElementsByClassName('menu-gif')[refindex].style.opacity = '1';
+    songbut[refindex].classList.remove('fa-play');
+    songbut[refindex].classList.add('fa-pause');
+})
+
+prevbut.addEventListener('click',()=>{
+    makeallplay();
+    gifoff();
+    audio.currentTime = 0;
+    if(refindex-1 < 0) {
+        refindex = 4;
+    }
+    else 
+        {refindex--;}
+    audio.src = listofsongs[refindex].songpath;
+    audio.play();
     document.getElementById('topofmaster').innerHTML = listofsongs[refindex].songname;
     document.getElementsByClassName('menu-gif')[refindex].style.opacity = '1';
     songbut[refindex].classList.remove('fa-play');
