@@ -84,6 +84,7 @@ Array.from(document.getElementsByClassName('song-but')).forEach((element)=>{
     element.addEventListener('click',(e)=>{
         makeallplay();
         gifoff();
+        audio.currentTime = 0;
         if(audio.paused || audio.currentTime<=0) {
             gif.style.opacity = 1;
             index = parseInt(e.target.id);
