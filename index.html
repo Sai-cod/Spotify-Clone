@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify.com</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+            
+        <div class="logo">
+            <div class="act-logo">
+                <img src="photos/logo.png" >
+            </div>
+            <div class="brand">
+                Spotify
+            </div>
+        </div>
+
+        <div class="home">
+            Home
+        </div>
+
+        <div class="about">
+            About
+        </div>
+
+    </div>
+
+    <div class="main-content">
+        <div class="title">
+            <h3>Best of Arijit Singh</h3>
+        </div>
+        <div class="songs">
+            <div class="song">
+                <img src="photos/galti.jpg">
+                <div class="song-title">
+                    Channa Mereya
+                </div>
+                <img src="photos/music2.gif" class = "menu-gif" id="gif0">
+                <p>2.52</p>
+                <i  id = "0"class="fa-solid  song-but fa-play" ></i>
+            </div>
+
+            <div class="song">
+                <img src="photos/galti.jpg">
+                <div class="song-title">
+                    Channa Mereya
+                </div>
+                <img src="photos/music2.gif" class = "menu-gif" id="gif1">
+                <p>3.08</p>
+                <i id = "1"class="fa-solid  song-but fa-play" ></i>
+            </div>
+
+            <div class="song">
+                <img src="photos/galti.jpg">
+                <div class="song-title">
+                    Channa Mereya
+                </div>
+                <img src="photos/music2.gif" class = "menu-gif" id="gif2">
+                <p>5.36</p>
+                <i  id = "2"class="fa-solid  song-but fa-play" ></i>
+            </div>
+            <div class="song">
+                <img src="photos/galti.jpg">
+                <div class="song-title">
+                    Channa Mereya
+                </div>
+                <img src="photos/music2.gif" class = "menu-gif" id="gif3">
+                <p>4.00</p>
+                <i  id = "3"class="fa-solid  song-but fa-play" ></i>
+            </div>
+        </div> 
+    </div>
+
+    <div class="bottom">
+        <div class="song-info">
+            <img src="photos/music.gif" id = "music-gif">
+            <div class="name" >
+                <p id="topofmaster">Galti Se Mistake</p>
+            </div>
+        </div>
+        <input type="range" name="range" id="progressBar"  min="0" value='0' max="100">
+        <div class="icons">
+            <i id="previous-button"class="fa-solid fa-2x fa-backward"></i>
+            <i id="play-button" class="fa-solid  fa-2x fa-play"></i>
+            <i id="forward-button"class="fa-solid fa-2x fa-forward"></i>
+        </div>
+    </div>
+    <script src="spotify.js"></script>
+</body>
+</html>
