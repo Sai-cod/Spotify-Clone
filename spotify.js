@@ -98,7 +98,7 @@ Array.from(document.getElementsByClassName('song-but')).forEach((element)=>{
             masterplay.classList.add('fa-pause');
             document.getElementsByClassName('menu-gif')[index].style.opacity = '1';
         }
-        else {
+        else if(audio.played || audio.currentTime>0) {
             e.target.classList.remove('fa-pause');
             e.target.classList.add('fa-play');
             masterplay.classList.remove('fa-pause');
