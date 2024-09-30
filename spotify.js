@@ -35,6 +35,7 @@ const gifoff=()=>{
     })
 }
 
+audio.src = listofsongs[refindex].songpath;
 
 
 masterplay.addEventListener('click',()=>{
@@ -42,7 +43,6 @@ masterplay.addEventListener('click',()=>{
         masterplay.classList.remove('fa-play');
         masterplay.classList.add('fa-pause');
         gif.style.opacity = 1;
-        audio.src = listofsongs[refindex].songpath;
         document.getElementsByClassName('menu-gif')[refindex].style.opacity = '1';
         songbut[refindex].classList.remove('fa-play');
         songbut[refindex].classList.add('fa-pause');
@@ -130,8 +130,9 @@ prevbut.addEventListener('click',()=>{
     if(refindex-1 < 0) {
         refindex = 4;
     }
-    else 
-        {refindex--;}
+    else { 
+        refindex--;
+    }        
     audio.src = listofsongs[refindex].songpath;
     audio.play();
     document.getElementById('topofmaster').innerHTML = listofsongs[refindex].songname;
