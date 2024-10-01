@@ -65,8 +65,9 @@ body{
 
 .bottom{
     height: 20vh;
-    position: sticky;
+    position: fixed;
     bottom: 0;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -94,6 +95,7 @@ body{
 
 .main-content {
     min-height: 70vh;
+    position: absolute;
     min-width: 430px;
     color: white;
     background-color: rgb(45,38,38);
@@ -101,6 +103,7 @@ body{
     width: 70vw;
     margin-right: 15%;
     margin-left: 15%;
+    height: 300px;
     border-radius: 15px;
     padding-top: 1%;
     padding-left: 3%;
@@ -110,7 +113,6 @@ body{
     background-image: url(photos/wallpaper.jpg);
     background-size: cover;
     margin-bottom: 25px;
-
 }
 
 .title{
@@ -186,6 +188,10 @@ body{
     padding-right: 15px;
 }
 
+.fa-heart{
+    margin-left: 25px;
+}
+
 .menu-gif{
     display: flex;
     justify-content: flex-start;
@@ -206,6 +212,10 @@ body{
     animation-duration: 2s;
     animation-timing-function: ease-in;
     animation-delay: 0.3s;
+}
+
+.songs {
+    height: 1000px;
 }
 
 @keyframes move {

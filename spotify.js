@@ -22,6 +22,10 @@ let listofsongs = [
     {songname: 'Bandeya', songpath: 'songs/4.mp3',cover: 'photos/bandeya2.jpg'}
 ]
 
+let heartplayer = [0,0,0,0]
+
+let arrayAudio = [0,0,0,0]
+
 let refindex = 0, newind = 0;
 
 Array.from(document.getElementsByClassName('song')).forEach((any,i)=>{
@@ -38,7 +42,6 @@ const gifoff=()=>{
 }
 
 audio.src = listofsongs[refindex].songpath;
-
 
 masterplay.addEventListener('click',()=>{
     if(audio.paused || audio.currentTime<=0) {
@@ -86,11 +89,13 @@ Array.from(document.getElementsByClassName('song-but')).forEach((element)=>{
     element.addEventListener('click',(e)=>{
         makeallplay();
         gifoff();
-        if(audio.paused || audio.currentTime<=0) {
-            audio.currentTime = 0;
+        
+        index = parseInt(e.target.id);
+        audio.currentTime = 0;
+        if(audio.paused || audio.currentTime<=0 && arrayAudio[index]==0) {
             gif.style.opacity = 1;
-            index = parseInt(e.target.id);
             refindex = index;
+            arrayAudio[index] = 1;
             audio.src = listofsongs[index].songpath;
             document.getElementById('topofmaster').innerHTML = listofsongs[index].songname;
             audio.play();
@@ -145,6 +150,25 @@ prevbut.addEventListener('click',()=>{
     masterplay.classList.remove('fa-play');
     masterplay.classLis.add('fa-pause');
 })
+
+let str = "sai";
+
+Array.from(document.getElementsByClassName("song")).forEach((element,i)=>{
+    element.getElementsByClassName('fa-heart')[0].addEventListener('click',(any)=>{
+        str = any.target.id.slice(0,-1);
+        heartindex = parseInt(str);
+        if(heartplayer[heartindex]==0) {
+            heartplayer[heartindex] = 1;
+            any.target.style.color = 'red';
+        }
+        else {
+            heartplayer[heartindex] = 0;
+            any.target.style.color = 'white';
+   
+        }
+    })
+})
+
 
 
 
