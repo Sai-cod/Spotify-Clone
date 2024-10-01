@@ -86,8 +86,6 @@ body{
 
 #progressBar{
     width: 65vw;  
-    
-
 }
 
 #progressBar:hover{
@@ -96,7 +94,7 @@ body{
 
 .main-content {
     min-height: 70vh;
-    min-width: 355px;
+    min-width: 430px;
     color: white;
     background-color: rgb(45,38,38);
     margin-top: 15px;
@@ -168,7 +166,7 @@ body{
 
 .song-info{
     height: 20px;
-    min-width: 350px;
+    min-width: 370px;
     max-width: 380px;
     width: 50%;
     display: flex;
@@ -216,6 +214,10 @@ body{
     to{
         opacity: 0;
     }
+}
+
+.songs{
+    position: absolute;
 }
 
 
