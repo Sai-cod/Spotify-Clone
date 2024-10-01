@@ -214,9 +214,7 @@ body{
     animation-delay: 0.3s;
 }
 
-.songs {
-    height: 1000px;
-}
+
 
 @keyframes move {
     from{
