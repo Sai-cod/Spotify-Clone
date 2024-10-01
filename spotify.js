@@ -25,8 +25,10 @@ let listofsongs = [
 let refindex = 0, newind = 0;
 
 Array.from(document.getElementsByClassName('song')).forEach((any,i)=>{
+
     any.getElementsByTagName('img')[0].src = listofsongs[i].cover;
     any.getElementsByClassName('song-title')[0].innerHTML = listofsongs[i].songname;
+    
 })
 
 const gifoff=()=>{
@@ -140,6 +142,8 @@ prevbut.addEventListener('click',()=>{
     document.getElementsByClassName('menu-gif')[refindex].style.opacity = '1';
     songbut[refindex].classList.remove('fa-play');
     songbut[refindex].classList.add('fa-pause');
+    masterplay.classList.remove('fa-play');
+    masterplay.classLis.add('fa-pause');
 })
 
 

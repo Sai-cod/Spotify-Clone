@@ -122,6 +122,7 @@ body{
 
 .song img{
     height: 8vh;
+
     border-radius: 10%;
     margin-right: 25px;
 }
@@ -215,9 +216,3 @@ body{
         opacity: 0;
     }
 }
-
-.songs{
-    position: absolute;
-}
-
-
